@@ -100,6 +100,7 @@ class Calculado{
   * Inserta el menú de inicio que explica los controles y las opciones de juego
   */
   startMenu(){
+    clearTimeout(this.survivalTime)
     this.sounds.backgound.pause()
     this.started                    = false
     this.container.innerHTML        = ''
