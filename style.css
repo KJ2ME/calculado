@@ -1,0 +1,133 @@
+body{
+  background: #f6f6f6;
+  font-family: 'Roboto', sans-serif;
+}
+
+.game-container {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 40px;
+  color: #464646;
+}
+
+.start-menu {
+  max-width: 300px;
+  margin: 5vh auto;
+  box-shadow: 0px 0px 3px gray;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.start-menu input, .start-menu select {
+  background: 
+  transparent;
+  box-shadow: 0px 0px 1px;
+  height: 30px;
+  width: 100%;
+}
+
+.start-button {
+  display: inline-block;
+  box-shadow: 0px 0px 3px gray;
+  background: #019501;
+  color: #eee;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.exercise, .reply, .exercise-container {
+  display: inline-block;
+}
+
+.reply {
+  min-width: 50px;
+  min-height: 50px;
+  border: 1px dotted #464646;
+  margin-left: 10px;
+}
+
+.reply::before {
+  content: ' ';
+}
+
+.greenflash {
+  animation-duration: 1s;
+  animation-name: greenflash;
+}
+
+.redflash {
+  animation-duration: 1s;
+  animation-name: redflash;
+}
+
+.progress-bar{
+  margin: 10px auto;
+  max-width: 300px;
+  text-align: center;
+}
+
+.load-bar{
+  height: 10px;
+  border-radius: 5px;
+  /*margin: 0 auto;*/
+  animation-duration: 10s;
+  animation-name: filload;
+}
+
+.stats {
+  position: absolute;
+  top: 2vw;
+  right: 2vw;
+  font-size: 20px;
+  text-align: right;
+}
+
+.footer {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: small;
+}
+
+@keyframes greenflash {
+  from {
+    background: green;
+    color: white;
+  }
+
+  to {
+    background: transparent;
+    color: #464646;
+  }
+}
+
+@keyframes redflash {
+  from {
+    background: red;
+    color: white;
+  }
+
+  to {
+    background: transparent;
+    color: #464646;
+  }
+}
+
+@keyframes filload {
+  from {
+    background: green;
+    width: 100%;
+  }
+  
+  to {
+    background: red;
+    width: 0%
+  }
+}
